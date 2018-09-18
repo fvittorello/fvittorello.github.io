@@ -1,16 +1,4 @@
-# [Personal: HTML5 website template](http://buckymaler.com/featured-work/personal)
+# [HTML5 website portfolio]
 
-Personal is a modern and bold website template suited perfectly for a UI/UX Design professional's portfolio.
-
-The original PSD is included and was provided by [Web Donut](http://webdonut.net)
-
-This project was developed with HTML5, Sass, jQuery, TweenLite, and ScrollMagic.
-
-Performance basics are covered: assets are minified into single CSS and JS files, and the images are optimized.
-
-[LIVE PREVIEW](http://buckymaler.com/featured-work/personal)
-
-## Misc:
-
-* Follow Bucky: [Twitter](https://twitter.com/BuckyMaler), [GitHub](https://github.com/BuckyMaler)
-* Follow Web Donut: [Twitter](https://twitter.com/@thewebdonut), [Dribbble](https://dribbble.com/WebDonut)
+This site is made with the prupose of showing the Multimadia Design works I have done,
+if you like it fell free to download it and use it or if you have any suggestions contact me!
