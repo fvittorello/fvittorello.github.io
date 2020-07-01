@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,400;0,700;1,700&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="styles/style.css" />
+		<link id="cache" rel="stylesheet" href="styles/sailorNightTheme.css" />
+		<link id="theme" rel="stylesheet" href="styles/sailorDayTheme.css" />
+		<title>GifOS - mis Gifos</title>
+	</head>
+	<body>
+		<div class="main-title">
+			<p class="main-title__text">
+				¡Bienvenidos/as a Guifos.com! ——————Donde los gifs están.////// Número de visitas: 12.765.803
+			</p>
+		</div>
+
+		<div class="container">
+			<nav class="nav">
+				<a href="index.html"><img class="nav__logo" src="assets/img/gifOF_logo.png" alt="gifOS Logo" /></a>
+
+				<ul class="nav__btns">
+					<li><a class="btn btn-default" href="mygifos.html">Crear Guifos</a></li>
+					<li>
+						<ul class="nav__secondary-btn">
+							<li class="btn btn-default">Elegir tema</li>
+							<li class="btn btn-default-small"><img src="assets/svg/dropdown.svg" alt="dropdown" /></li>
+						</ul>
+						<div class="nav__dropdown hidden">
+							<button id="day-theme-btn" class="btn btn-adaptable btn-theme" type="button">
+								<span class="underline">S</span>ailor Day
+							</button>
+							<button id="night-theme-btn" class="btn btn-adaptable btn-theme" type="button">Sailor Night</button>
+						</div>
+					</li>
+					<li class="nav__link">
+						<button id="myGifos_btn" class="btn-link" type="button"><span class="underline">M</span>is Guifos</button>
+					</li>
+				</ul>
+			</nav>
+
+			<section class="create-gifos">
+				<div id="create-window" class="create-window">
+					<div class="create-window__title">
+						<p>Crear Guifos</p>
+					</div>
+					<img class="create-window__icon" src="assets/img/window_img.png" alt="Window icon" />
+					<h3 class="create-window__header">Aquí podrás crear tus propios guifos</h3>
+					<p class="create-window__text">
+						Crear tu <span class="bold italic">guifo</span> es muy fácil, graba cualquier imagen con tu cámara y obtén
+						guifos personalizados. Los pasos para crear tu guifo son:
+					</p>
+					<p class="create-window__text">
+						<span class="bold">1)</span> Dar permisos de acceso a la cámara (sólo por el tiempo de uso)
+					</p>
+					<p class="create-window__text"><span class="bold">2)</span> Capturar tu momento guifo</p>
+					<p class="create-window__text"><span class="bold">3)</span> Revisar el momento</p>
+					<p class="create-window__text"><span class="bold">4)</span> Listo para subir y compartir!</p>
+					<p class="create-window__text">¿Quieres comenzar a crear tu <span class="bold italic">guifo</span> ahora?</p>
+					<div class="create-window__buttons">
+						<a href="index.html"><button class="btn btn-default" type="button">Cancelar</button></a>
+						<button id="streamBtn" class="btn btn-default margin-left" type="button">Comenzar</button>
+					</div>
+				</div>
+
+				<div id="stream-window" class="capture-window hidden">
+					<div class="capture-window__title">
+						<p>Un Chequeo Antes de Empezar</p>
+						<img src="assets/svg/button3.svg" alt="cross button" />
+					</div>
+					<div class="capture-window__display">
+						<video id="video-tag" class="video-container"></video>
+					</div>
+					<div class="capture-window__buttons">
+						<div class="counter">
+							<p id="timer">00:00:00:00</p>
+						</div>
+						<div class="action-buttons">
+							<div id="preview-container" class="preview-bar-container hidden">
+								<button class="btn btn-play" type="button">
+									<img src="assets/svg/forward.svg" alt="boton de reproduccion de vista previa" />
+								</button>
+								<div class="preview-bar">
+									<span class="preview-cell"></span>
+									<span class="preview-cell"></span>
+									<span class="preview-cell"></span>
+									<span class="preview-cell"></span>
+									<span class="preview-cell"></span>
+									<span class="preview-cell"></span>
+									<span class="preview-cell"></span>
+									<span class="preview-cell"></span>
+									<span class="preview-cell"></span>
+									<span class="preview-cell"></span>
+									<span class="preview-cell"></span>
+									<span class="preview-cell"></span>
+									<span class="preview-cell"></span>
+									<span class="preview-cell"></span>
+									<span class="preview-cell"></span>
+									<span class="preview-cell"></span>
+									<span class="preview-cell"></span>
+								</div>
+							</div>
+							<div id="startBtn" class="capture-btn hidden">
+								<div class="btn btn-default-small">
+									<img src="assets/svg/camera.svg" alt="camera icon" />
+								</div>
+								<button class="btn btn-default" type="button">Capturar</button>
+							</div>
+							<div id="stopBtn" class="stop-btn hidden">
+								<div class="btn-small btn btn-default-small btn-red">
+									<img src="assets/svg/recording.svg" alt="camera icon" />
+								</div>
+								<button class="btn btn-default btn-red" type="button">Listo</button>
+							</div>
+							<div id="repeat-upload-btns" class="repeat-upload-container hidden">
+								<button id="repeatBtn" class="btn btn-default btn-white" type="button">Repetir Captura</button>
+								<button id="uploadBtn" class="btn btn-default" type="button">Subir Guifo</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div id="upload-window" class="capture-window hidden">
+					<div class="capture-window__title">
+						<p>Subiendo Guifo</p>
+						<img src="assets/svg/button3.svg" alt="cross button" />
+					</div>
+					<div class="capture-window__display">
+						<img src="assets/img/globe_img.png" alt="globo terraqueo" />
+						<h4>Estamos subiendo tu guifo...</h4>
+						<div></div>
+						<p>Tiempo restante <span class="line-through">38 años</span> algunos minutos</p>
+					</div>
+					<div class="capture-window__buttons justify-right">
+						<div class="action-buttons-secondary">
+							<div class="capture-btn">
+								<button class="btn btn-default btn-white" type="button">Cancelar</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div id="success-window" class="success-window-container hidden">
+					<div class="success-window__title">
+						<p>Guifo Subido Con Éxito</p>
+						<img src="assets/svg/button3.svg" alt="cross button" />
+					</div>
+					<div class="success-window">
+						<div class="column-left">
+							<div class="success-gif-container">
+								<img id="uploaded-gif-container" src="https://via.placeholder.com/365x191" alt="placeholder" />
+							</div>
+						</div>
+						<div class="column-right">
+							<h3>Guifo creado con éxito</h3>
+							<button id="clipboard_btn" class="btn btn-adaptable btn-white" type="button">Copiar Enlace Guifo</button>
+							<button id="download_btn" class="btn btn-adaptable btn-white" type="button">Descargar Guifo</button>
+						</div>
+
+						<div class="success-window__buttons justify-right">
+							<div class="action-buttons-secondary">
+								<div class="capture-btn">
+									<button id="done_btn" class="btn btn-default" type="button">Listo</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="my-gifos">
+				<header class="my-gifos-title section-header">
+					<p>Mis guifos</p>
+				</header>
+				<div id="loaded-gifs" class="saved-container"></div>
+			</section>
+		</div>
+
+		<script src="https://www.WebRTC-Experiment.com/RecordRTC.js"></script>
+		<script src="https://www.webrtc-experiment.com/gif-recorder.js"></script>
+		<!-- <script src="main.js"></script> -->
+		<script src="mygifos.js"></script>
+	</body>
+</html>

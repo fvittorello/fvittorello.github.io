@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,400;0,700;1,700&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="styles/style.css" />
+		<link id="cache" rel="stylesheet" href="styles/sailorNightTheme.css" />
+		<link id="theme" rel="stylesheet" href="styles/sailorDayTheme.css" />
+		<title>GifOS</title>
+	</head>
+	<body>
+		<div class="main-title">
+			<p class="main-title__text">
+				¡Bienvenidos/as a Guifos.com! ——————Donde los gifs están.////// Número de visitas: 12.765.803
+			</p>
+		</div>
+
+		<div class="container">
+			<nav class="nav">
+				<a href="index.html"><img class="nav__logo" src="assets/img/gifOF_logo.png" alt="gifOS Logo" /></a>
+
+				<ul class="nav__btns">
+					<li><a class="btn btn-default" href="mygifos.html">Crear Guifos</a></li>
+					<li>
+						<ul class="nav__secondary-btn">
+							<li class="btn btn-default">Elegir tema</li>
+							<li class="btn btn-default-small"><img src="assets/svg/dropdown.svg" alt="dropdown" /></li>
+						</ul>
+						<div class="nav__dropdown hidden">
+							<button id="day-theme-btn" class="btn btn-adaptable btn-theme" type="button">
+								<span class="underline">S</span>ailor Day
+							</button>
+							<button id="night-theme-btn" class="btn btn-adaptable btn-theme" type="button">Sailor Night</button>
+						</div>
+					</li>
+					<li class="nav__link">
+						<button id="myGifos_btn" class="btn-link" type="button"><span class="underline">M</span>is Guifos</button>
+					</li>
+				</ul>
+			</nav>
+			<div class="search">
+				<div class="search-title">
+					<p class="search-title__text">Buscar</p>
+				</div>
+				<form class="search-content" method="GET">
+					<label for="search-input"></label>
+					<input
+						class="search-input"
+						id="search-input"
+						type="text"
+						autocomplete="off"
+						placeholder="Busca gifs, temas, busca lo que quieras..."
+					/>
+					<button class="btn btn-search" type="submit"><img src="assets/svg/lupa.svg" alt="lupa" /> Buscar</button>
+				</form>
+			</div>
+			<div class="autocomplete hidden"></div>
+			<div class="related"></div>
+			<main>
+				<section class="today">
+					<header class="today-title section-header">
+						<p>Hoy te sugerimos:</p>
+					</header>
+					<div class="today__container">
+						<div class="today__item">
+							<div class="item-header">
+								<p class="item-header__text">#LoremIpsumDolor</p>
+								<img class="item-header__img" src="assets/svg/button3.svg" alt="close button" />
+							</div>
+							<img class="item__img" src="https://via.placeholder.com/280" alt="placeholder" />
+							<button class="btn btn-related item__btn" type="button">Ver más...</button>
+						</div>
+
+						<div class="today__item">
+							<div class="item-header">
+								<p class="item-header__text">#LoremIpsumDolor</p>
+								<img class="item-header__img" src="assets/svg/button3.svg" alt="close button" />
+							</div>
+							<img class="item__img" src="https://via.placeholder.com/280" alt="placeholder" />
+							<button class="item__btn" type="button">Ver más...</button>
+						</div>
+
+						<div class="today__item">
+							<div class="item-header">
+								<p class="item-header__text">#LoremIpsumDolor</p>
+								<img class="item-header__img" src="assets/svg/button3.svg" alt="close button" />
+							</div>
+							<img class="item__img" src="https://via.placeholder.com/280" alt="placeholder" />
+							<button class="item__btn" type="button">Ver más...</button>
+						</div>
+
+						<div class="today__item">
+							<div class="item-header">
+								<p class="item-header__text">#LoremIpsumDolor</p>
+								<img class="item-header__img" src="assets/svg/button3.svg" alt="close button" />
+							</div>
+							<img class="item__img" src="https://via.placeholder.com/280" alt="placeholder" />
+							<button class="item__btn" type="button">Ver más...</button>
+						</div>
+					</div>
+				</section>
+
+				<section class="tendencies">
+					<header class="tendencies__title section-header">
+						<p>Tendencias:</p>
+					</header>
+					<div class="tendencies-container"></div>
+				</section>
+
+				<section class="results hidden">
+					<header class="results-title section-header">
+						<p>Ejemplo de búsqueda (resultados)</p>
+					</header>
+					<div class="results-container"></div>
+				</section>
+
+				<section class="my-gifos hidden">
+					<header class="my-gifos-title section-header">
+						<p>Mis guifos</p>
+					</header>
+					<div id="loaded-gifs" class="saved-container"></div>
+				</section>
+			</main>
+		</div>
+
+		<script src="main.js"></script>
+	</body>
+</html>
