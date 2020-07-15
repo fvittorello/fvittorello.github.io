@@ -1,2 +1,0 @@
-# Podcast
- First Acamica project
