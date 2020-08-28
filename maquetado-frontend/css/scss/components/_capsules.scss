@@ -1,0 +1,48 @@
+//  Capsules of days
+
+.capsules {
+	width: 320px;
+	height: 34px;
+	margin: auto;
+	// margin-top: 42px;
+	margin-top: 27px;
+}
+
+.selector {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	font-weight: 400;
+	font-size: 16px;
+
+	&__left,
+	&__right {
+		height: 34px;
+		width: 33.3%;
+		line-height: 34px;
+		text-align: center;
+		font-family: $roboto;
+		color: $color-grey-strong;
+		background: $color-grey-soft;
+	}
+
+	&__left {
+		border-radius: 17px 0 0 17px;
+	}
+
+	&__right {
+		border-radius: 0 17px 17px 0;
+	}
+
+	&__middle {
+		height: 34px;
+		width: 33.3%;
+		line-height: 34px;
+		text-align: center;
+		font-family: $openSans;
+		color: $color-white;
+		background: linear-gradient(180deg, $color-orange-soft, $color-orange-strong);
+	}
+}

@@ -1,0 +1,263 @@
+// .container {
+// 	display: flex;
+// 	justify-content: center;
+// 	align-items: center;
+// 	height: 100vh;
+// 	color: $color-white;
+// }
+
+//  App Banner
+
+.header {
+	height: 91px;
+	background: $color-orange-soft;
+	display: flex;
+	align-items: center;
+	padding: 15px;
+	padding-top: 50px;
+	position: relative;
+	box-shadow: 0px 3px 3px $color-black-t29;
+}
+
+.main-screen {
+	height: 667px;
+	width: 360px;
+	border: solid 2px $color-grey-soft;
+	background: $color-white;
+}
+
+.nav-bar {
+	color: $color-white;
+}
+
+.bars-icon,
+.nav-options {
+	width: 18px;
+	height: 18px;
+}
+
+.page-title {
+	text-transform: uppercase;
+	color: $color-white;
+	font-family: $roboto;
+	font-weight: 500;
+	font-size: 20px;
+	margin-left: 30px;
+}
+
+.nav-options {
+	position: absolute;
+	right: 15px;
+	color: $color-white;
+}
+
+//  User Data and Badges
+
+.user {
+	&-data {
+		margin: 27px;
+		display: flex;
+		align-items: center;
+		position: relative;
+	}
+
+	&-name {
+		font-family: $roboto;
+		font-weight: 400;
+		font-size: 24px;
+		color: $color-orange-soft;
+	}
+
+	&-badges {
+		display: flex;
+		position: absolute;
+		right: 0;
+		justify-content: flex-end;
+		align-items: center;
+	}
+
+	&-badges__item {
+		margin-left: 5px;
+	}
+}
+
+.plus-badges {
+	font-family: $roboto;
+	font-weight: 400;
+	color: $color-grey-strong;
+}
+
+//  Capsules of days
+
+.capsules {
+	width: 320px;
+	height: 34px;
+	margin: auto;
+	// margin-top: 42px;
+	margin-top: 27px;
+}
+
+.selector {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	font-weight: 400;
+	font-size: 16px;
+
+	&__left,
+	&__right {
+		height: 34px;
+		width: 33.3%;
+		line-height: 34px;
+		text-align: center;
+		font-family: $roboto;
+		color: $color-grey-strong;
+		background: $color-grey-soft;
+	}
+
+	&__left {
+		border-radius: 17px 0 0 17px;
+	}
+
+	&__right {
+		border-radius: 0 17px 17px 0;
+	}
+
+	&__middle {
+		height: 34px;
+		width: 33.3%;
+		line-height: 34px;
+		text-align: center;
+		font-family: $openSans;
+		color: $color-white;
+		background: linear-gradient(180deg, $color-orange-soft, $color-orange-strong);
+	}
+}
+
+//  Cards of tasks
+
+.card {
+	width: 312px;
+	height: 76px;
+	display: flex;
+	align-items: center;
+	margin: auto;
+	margin-top: 19px;
+	background: $color-walter-white;
+	box-shadow: 0px 3px 6px $color-black-t29;
+	border-radius: 6px;
+	position: relative;
+
+	&__icon-container {
+		height: 53px;
+		width: 53px;
+		margin-left: 20px;
+		position: relative;
+		border-radius: 100%;
+		background: linear-gradient(180deg, $color-orange-soft, $color-orange-strong);
+
+		&--done {
+			background: $color-grey-strong;
+		}
+	}
+
+	&__icon {
+		width: 21px;
+		height: auto;
+		position: relative;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	&__text-container {
+		margin-left: 23px;
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__title {
+		font-family: $openSans;
+		font-weight: 400;
+		font-size: 18px;
+		color: $color-orange-soft;
+
+		&--done {
+			color: $color-grey-strong;
+		}
+	}
+
+	&__subtitle {
+		font-family: $openSans;
+		font-weight: 400;
+		font-size: 11px;
+		color: $color-grey-strong;
+		text-transform: uppercase;
+	}
+
+	&__checkbox {
+		height: 25px;
+		width: 25px;
+		border: solid 2px $color-grey-mid;
+		border-radius: 5px;
+		position: absolute;
+		top: 10px;
+		right: 10px;
+	}
+}
+
+//  Line divider & Counters
+
+.divider {
+	margin: 25px 20px 16px 20px;
+	border: solid 1px $color-grey-strong;
+	opacity: 0.5;
+}
+
+.counter {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	font-family: $roboto;
+	text-transform: uppercase;
+	margin: 0 20px;
+}
+
+.total {
+	margin-top: 7px;
+
+	&__title {
+		font-weight: 400;
+		font-size: 14px;
+		color: $color-grey-strong;
+	}
+
+	&__count {
+		font-weight: 400;
+		font-size: 14px;
+		color: $color-grey-strong;
+	}
+}
+
+.week {
+	&__title {
+		font-weight: 500;
+		font-size: 14px;
+		color: $color-orange-soft;
+	}
+
+	&__count {
+		font-weight: 500;
+		font-size: 18px;
+		color: $color-orange-soft;
+	}
+}
+
+//  Utills
+
+.hidden {
+	visibility: hidden;
+}
