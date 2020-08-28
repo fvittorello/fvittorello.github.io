@@ -16,6 +16,10 @@ a {
 
 body {
   background: #fafafa;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .container {
@@ -192,7 +196,28 @@ body {
   font-size: 16px;
 }
 
-.selector__left, .selector__right {
+.selector__button {
+  border: none;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.selector__button:hover {
+  color: #fafafa;
+  font-family: "Open Sans", sans-serif;
+  background: #f26c4f;
+}
+
+.selector__button--left, .selector__button--right {
   height: 34px;
   width: 33.3%;
   line-height: 34px;
@@ -202,15 +227,15 @@ body {
   background: #e8e8e8;
 }
 
-.selector__left {
+.selector__button--left {
   border-radius: 17px 0 0 17px;
 }
 
-.selector__right {
+.selector__button--right {
   border-radius: 0 17px 17px 0;
 }
 
-.selector__middle {
+.selector__button--middle {
   height: 34px;
   width: 33.3%;
   line-height: 34px;
@@ -219,6 +244,14 @@ body {
   color: #fafafa;
   background: -webkit-gradient(linear, left top, left bottom, from(#f26c4f), to(#fe2c00));
   background: linear-gradient(180deg, #f26c4f, #fe2c00);
+}
+
+.button {
+  background: none;
+  border: none;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
 }
 
 .card {
