@@ -2,13 +2,15 @@
 @import 'scss/reset';
 @import 'scss/baseStyle';
 
-//  Components
-// @import 'scss/components/components';
+//  COMPONENTS
+//  Simulates a mobile screen container
+@import 'scss/components/screen-template';
 
-@import 'scss/components/base-screen';
+//  App header / title / main banner
 @import 'scss/components/app-banner';
-@import 'scss/components/user-data';
-@import 'scss/components/capsules';
-@import 'scss/components/task-cards';
-@import 'scss/components/counters';
+
+//  Main Content
+@import 'scss/components/main-content/main-content';
+
+//  Utillities
 @import 'scss/components/utills';

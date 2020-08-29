@@ -2,10 +2,17 @@
 
 .user {
 	&-data {
-		margin: 27px;
+		margin-top: 28px;
 		display: flex;
+		justify-content: space-between;
 		align-items: center;
 		position: relative;
+
+		&__left {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+		}
 	}
 
 	&-name {
@@ -17,19 +24,16 @@
 
 	&-badges {
 		display: flex;
-		position: absolute;
-		right: 0;
-		justify-content: flex-end;
 		align-items: center;
 	}
 
 	&-badges__item {
 		margin-left: 5px;
-	}
-}
 
-.plus-badges {
-	font-family: $roboto;
-	font-weight: 400;
-	color: $color-grey-strong;
+		&--plus {
+			font-family: $roboto;
+			font-weight: 400;
+			color: $color-grey-strong;
+		}
+	}
 }

@@ -1,9 +1,8 @@
-//  Line divider & Counters
+//	Counters
 
-.divider {
-	margin: 25px 20px 16px 20px;
-	border: solid 1px $color-grey-strong;
-	opacity: 0.5;
+.summary {
+	width: 100%;
+	margin-top: 16px;
 }
 
 .counter {
@@ -13,7 +12,6 @@
 	align-items: center;
 	font-family: $roboto;
 	text-transform: uppercase;
-	margin: 0 20px;
 }
 
 .total {

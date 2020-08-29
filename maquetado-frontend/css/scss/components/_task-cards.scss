@@ -1,7 +1,7 @@
 //  Cards of tasks
 
 .card {
-	width: 312px;
+	width: 100%;
 	height: 76px;
 	display: flex;
 	align-items: center;
@@ -22,8 +22,6 @@
 	}
 
 	&__icon {
-		// width: 21px;
-		// height: auto;
 		position: relative;
 		top: 50%;
 		left: 50%;
