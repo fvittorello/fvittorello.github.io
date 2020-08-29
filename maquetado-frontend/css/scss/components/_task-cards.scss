@@ -5,7 +5,6 @@
 	height: 76px;
 	display: flex;
 	align-items: center;
-	margin: auto;
 	margin-top: 19px;
 	background: $color-walter-white;
 	box-shadow: 0px 3px 6px $color-black-t29;
@@ -75,6 +74,7 @@
 
 		&:hover {
 			background: $color-grey-mid url(../assets/images/check.svg) center no-repeat;
+			transition: background-color 0.3s;
 		}
 
 		&-input {
@@ -88,6 +88,7 @@
 				& ~ .card__checkbox {
 					border: solid 2px $color-orange-soft;
 					background: $color-orange-soft url(../assets/images/check.svg) center no-repeat;
+					transition: border 0.3s, background-color 0.3s;
 				}
 
 				& ~ .card__icon-container {

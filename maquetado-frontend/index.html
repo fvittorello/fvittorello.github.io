@@ -14,19 +14,23 @@
 		<!-- Emulador de una pantalla movil -->
 		<div class="fake-screen-container">
 			<!-- Contenido del maquetado -->
-			<header class="header">
+			<header class="header" aria-label="page-banner">
 				<div class="header__left-container">
-					<label for="hor-bars" class="menu-button clickable">
-						<span class="bar-icon"></span>
-						<input id="hor-bars" type="checkbox" class="display-none" />
+					<label for="hor-bars" class="menu-button clickable" aria-label="menu" tabindex="0">
+						<span id="burger-icon" class="bar-icon"></span>
+						<input id="hor-bars" type="checkbox" class="display-none" name="burguer-menu" />
 					</label>
 
 					<h1 class="page-title">Kid Dashboard</h1>
 				</div>
 
-				<label class="menu-button menu-button--secondary clickable"
+				<label
+					for="vert-elipsis"
+					class="menu-button menu-button--secondary clickable"
+					aria-label="secondary menu"
+					tabindex="0"
 					><span class="vertical-elipsis"></span>
-					<input id="vert-elipsis" type="checkbox" class="display-none" />
+					<input id="vert-elipsis" type="checkbox" class="display-none" name="secondary-menu" />
 				</label>
 			</header>
 
@@ -37,7 +41,7 @@
 					</header>
 					<div class="user-data__left">
 						<a href="#">
-							<img src="./assets/images/user_icon.svg" alt="user icon" />
+							<img class="user-icon" src="./assets/images/fixed_user_icon.png" alt="user icon" />
 						</a>
 						<h3 class="user-name">John</h3>
 					</div>
@@ -58,9 +62,11 @@
 					<header class="sr-only">
 						<h2>Tasks</h2>
 					</header>
-					<div class="capsules">
+					<div class="capsules" role="radiogroup">
 						<input id="yesterday-radio" type="radio" name="day-selector" class="selector__radio--left display-none" />
-						<label for="yesterday-radio" class="selector__button selector__button--left clickable">Yesterday </label>
+						<label for="yesterday-radio" class="selector__button selector__button--left clickable" tabindex="0"
+							>Yesterday</label
+						>
 
 						<input
 							id="today-radio"
@@ -69,19 +75,27 @@
 							checked
 							class="selector__radio--middle display-none"
 						/>
-						<label for="today-radio" class="selector__button selector__button--middle clickable">Today </label>
+						<label for="today-radio" class="selector__button selector__button--middle clickable" tabindex="0"
+							>Today
+						</label>
 
 						<input id="tomorrow-radio" type="radio" name="day-selector" class="selector__radio--right display-none" />
-						<label for="tomorrow-radio" class="selector__button selector__button--right clickable">Tomorrow </label>
+						<label for="tomorrow-radio" class="selector__button selector__button--right clickable" tabindex="0"
+							>Tomorrow
+						</label>
 					</div>
 
 					<ul id="yesterday-items" class="yesterday-items display-none">
 						<li class="card">
 							<input id="yesterday-card-1" class="hidden card__checkbox-input" type="checkbox" checked />
-							<label for="yesterday-card-1" class="card__checkbox clickable"></label>
+							<label for="yesterday-card-1" class="card__checkbox clickable" tabindex="0"></label>
 
 							<span class="card__icon-container">
-								<img class="card__icon card__icon--paw" src="./assets/images/004-paw.svg" alt="bathroom icon" />
+								<img
+									class="card__icon not-focusable card__icon--paw"
+									src="./assets/images/004-paw.svg"
+									alt="bathroom icon"
+								/>
 							</span>
 							<div class="card__text-container">
 								<h3 class="card__title"><a href="#">Feed Dog</a></h3>
@@ -91,11 +105,11 @@
 
 						<li class="card">
 							<input id="yesterday-card-2" class="hidden card__checkbox-input" type="checkbox" checked />
-							<label for="yesterday-card-2" class="card__checkbox clickable"></label>
+							<label for="yesterday-card-2" class="card__checkbox clickable" tabindex="0"></label>
 
 							<span class="card__icon-container">
 								<img
-									class="card__icon card__icon--bathroom"
+									class="card__icon not-focusable card__icon--bathroom"
 									src="./assets/images/bathroom_icon.svg"
 									alt="bathroom icon"
 								/>
@@ -108,10 +122,14 @@
 
 						<li class="card">
 							<input id="yesterday-card-3" class="hidden card__checkbox-input" type="checkbox" checked />
-							<label for="yesterday-card-3" class="card__checkbox clickable"></label>
+							<label for="yesterday-card-3" class="card__checkbox clickable" tabindex="0"></label>
 
 							<span class="card__icon-container">
-								<img class="card__icon card__icon--sofa" src="./assets/images/006-sofa.svg" alt="bathroom icon" />
+								<img
+									class="card__icon not-focusable card__icon--sofa"
+									src="./assets/images/006-sofa.svg"
+									alt="bathroom icon"
+								/>
 							</span>
 							<div class="card__text-container">
 								<h3 class="card__title"><a href="#">Clean Windows</a></h3>
@@ -121,10 +139,14 @@
 
 						<li class="card">
 							<input id="yesterday-card-4" class="hidden card__checkbox-input" type="checkbox" checked />
-							<label for="yesterday-card-4" class="card__checkbox clickable"></label>
+							<label for="yesterday-card-4" class="card__checkbox clickable" tabindex="0"></label>
 
 							<span class="card__icon-container">
-								<img class="card__icon card__icon--sofa" src="./assets/images/006-sofa.svg" alt="bathroom icon" />
+								<img
+									class="card__icon not-focusable card__icon--sofa"
+									src="./assets/images/006-sofa.svg"
+									alt="bathroom icon"
+								/>
 							</span>
 							<div class="card__text-container">
 								<h3 class="card__title"><a href="#">Fix TV Table</a></h3>
@@ -134,10 +156,14 @@
 
 						<li class="card">
 							<input id="yesterday-card-5" class="hidden card__checkbox-input" type="checkbox" checked />
-							<label for="yesterday-card-5" class="card__checkbox clickable"></label>
+							<label for="yesterday-card-5" class="card__checkbox clickable" tabindex="0"></label>
 
 							<span class="card__icon-container">
-								<img class="card__icon card__icon--sofa" src="./assets/images/006-sofa.svg" alt="bathroom icon" />
+								<img
+									class="card__icon not-focusable card__icon--sofa"
+									src="./assets/images/006-sofa.svg"
+									alt="bathroom icon"
+								/>
 							</span>
 							<div class="card__text-container">
 								<h3 class="card__title"><a href="#">Move Couch</a></h3>
@@ -149,11 +175,11 @@
 					<ul id="today-items" class="today-items">
 						<li class="card">
 							<input id="today-card-1" class="hidden card__checkbox-input" type="checkbox" />
-							<label for="today-card-1" class="card__checkbox clickable"></label>
+							<label for="today-card-1" class="card__checkbox clickable" tabindex="0"></label>
 
 							<span class="card__icon-container">
 								<img
-									class="card__icon card__icon--bathroom"
+									class="card__icon not-focusable card__icon--bathroom"
 									src="./assets/images/bathroom_icon.svg"
 									alt="bathroom icon"
 								/>
@@ -166,10 +192,14 @@
 
 						<li class="card">
 							<input id="today-card-2" class="hidden card__checkbox-input" type="checkbox" checked />
-							<label for="today-card-2" class="card__checkbox clickable"></label>
+							<label for="today-card-2" class="card__checkbox clickable" tabindex="0"></label>
 
 							<span class="card__icon-container">
-								<img class="card__icon card__icon--paw" src="./assets/images/004-paw.svg" alt="bathroom icon" />
+								<img
+									class="card__icon not-focusable card__icon--paw"
+									src="./assets/images/004-paw.svg"
+									alt="bathroom icon"
+								/>
 							</span>
 							<div class="card__text-container">
 								<h3 class="card__title"><a href="#">Feed Cat</a></h3>
@@ -179,10 +209,14 @@
 
 						<li class="card">
 							<input id="today-card-3" class="hidden card__checkbox-input" type="checkbox" />
-							<label for="today-card-3" class="card__checkbox clickable"></label>
+							<label for="today-card-3" class="card__checkbox clickable" tabindex="0"></label>
 
 							<span class="card__icon-container">
-								<img class="card__icon card__icon--sofa" src="./assets/images/006-sofa.svg" alt="bathroom icon" />
+								<img
+									class="card__icon not-focusable card__icon--sofa"
+									src="./assets/images/006-sofa.svg"
+									alt="bathroom icon"
+								/>
 							</span>
 							<div class="card__text-container">
 								<h3 class="card__title"><a href="#">Swipe Floor</a></h3>
@@ -194,10 +228,14 @@
 					<ul id="tomorrow-items" class="tomorrow-items display-none">
 						<li class="card">
 							<input id="tomorrow-card-3" class="hidden card__checkbox-input" type="checkbox" />
-							<label for="tomorrow-card-3" class="card__checkbox clickable"></label>
+							<label for="tomorrow-card-3" class="card__checkbox clickable" tabindex="0"></label>
 
 							<span class="card__icon-container">
-								<img class="card__icon card__icon--sofa" src="./assets/images/006-sofa.svg" alt="bathroom icon" />
+								<img
+									class="card__icon not-focusable card__icon--sofa"
+									src="./assets/images/006-sofa.svg"
+									alt="bathroom icon"
+								/>
 							</span>
 							<div class="card__text-container">
 								<h3 class="card__title"><a href="#">Vacuum Floor</a></h3>
@@ -207,10 +245,14 @@
 
 						<li class="card">
 							<input id="tomorrow-card-2" class="hidden card__checkbox-input" type="checkbox" />
-							<label for="tomorrow-card-2" class="card__checkbox clickable"></label>
+							<label for="tomorrow-card-2" class="card__checkbox clickable" tabindex="0"></label>
 
 							<span class="card__icon-container">
-								<img class="card__icon card__icon--paw" src="./assets/images/004-paw.svg" alt="bathroom icon" />
+								<img
+									class="card__icon not-focusable card__icon--paw"
+									src="./assets/images/004-paw.svg"
+									alt="bathroom icon"
+								/>
 							</span>
 							<div class="card__text-container">
 								<h3 class="card__title"><a href="#">Feed Dog</a></h3>

@@ -1,7 +1,7 @@
 //  Capsules of days
 
 .tasks {
-	margin-top: 27px;
+	margin-top: 42px;
 }
 
 .capsules {
@@ -39,6 +39,7 @@
 		color: $color-white;
 		font-family: $openSans;
 		background: $color-orange-soft;
+		transition: background 0.3s;
 	}
 
 	&__button--left,
