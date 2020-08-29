@@ -23,3 +23,7 @@ function toggleClassFromElements(className, starterElement, elements) {
 		element.classList.add(className);
 	});
 }
+
+window.addEventListener('load', () => {
+	todayRadio.click();
+});
