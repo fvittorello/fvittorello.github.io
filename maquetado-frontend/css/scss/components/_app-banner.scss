@@ -5,6 +5,8 @@
 	height: 88px;
 	background: $color-orange-soft;
 	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
 	align-items: center;
 	padding: 22px;
 	padding-top: 42px;
@@ -12,35 +14,50 @@
 	top: 0;
 	z-index: 2;
 	box-shadow: 0px 3px 3px $color-black-t29;
+
+	&__left-container {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+	}
 }
 
 .menu-button {
 	background: transparent;
+	border-radius: 50%;
 	border: none;
-	width: 20px;
-	height: 20px;
-	position: relative;
+	width: 30px;
+	height: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	&:hover {
+		background: $color-black-t29;
+	}
 
 	&--secondary {
-		position: absolute;
-		right: 15px;
-		display: block;
-
-		&:hover .vertical-elipsis::before {
-			bottom: 8px;
+		position: relative;
+		&:hover {
+			background: $color-black-t29;
 		}
+	}
 
-		&:hover .vertical-elipsis::after {
-			top: 8px;
-		}
+	&:hover .bar-icon {
+		visibility: hidden;
 	}
 
 	&:hover .bar-icon::before {
-		bottom: 7px;
+		transform: rotate(45deg);
+		bottom: 0;
+		visibility: visible;
 	}
 
 	&:hover .bar-icon::after {
-		top: 7px;
+		transform: rotate(-45deg);
+		top: 0;
+		visibility: visible;
 	}
 }
 
@@ -48,8 +65,8 @@
 	display: block;
 	height: 2px;
 	width: 18px;
-	background: $color-walter-white;
 	position: relative;
+	background: $color-walter-white;
 	transition: all ease;
 
 	&::before,
@@ -64,10 +81,12 @@
 	}
 
 	&::before {
+		transform: rotate(0deg);
 		bottom: 5px;
 	}
 
 	&::after {
+		transform: rotate(0deg);
 		top: 5px;
 	}
 }
@@ -78,11 +97,14 @@
 	font-family: $roboto;
 	font-weight: 500;
 	font-size: 20px;
-	margin-left: 30px;
+	margin-left: 20px;
 }
 
 .vertical-elipsis {
 	position: absolute;
+	transform: translate(-50%, -50%);
+	left: 50%;
+	top: 50%;
 	height: 4px;
 	width: 4px;
 	border-radius: 100%;

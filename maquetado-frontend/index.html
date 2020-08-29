@@ -15,15 +15,19 @@
 		<div class="fake-screen-container">
 			<!-- Contenido del maquetado -->
 			<header class="header">
-				<button class="menu-button clickable">
-					<span class="bar-icon"></span>
-				</button>
+				<div class="header__left-container">
+					<label for="hor-bars" class="menu-button clickable">
+						<span class="bar-icon"></span>
+						<input id="hor-bars" type="checkbox" class="display-none" />
+					</label>
 
-				<h1 class="page-title">Kid Dashboard</h1>
+					<h1 class="page-title">Kid Dashboard</h1>
+				</div>
 
-				<button class="menu-button menu-button--secondary clickable">
-					<span class="vertical-elipsis"></span>
-				</button>
+				<label class="menu-button menu-button--secondary clickable"
+					><span class="vertical-elipsis"></span>
+					<input id="vert-elipsis" type="checkbox" class="display-none" />
+				</label>
 			</header>
 
 			<main class="main-content">

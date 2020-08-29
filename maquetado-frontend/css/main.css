@@ -56,6 +56,13 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -69,42 +76,75 @@ body {
           box-shadow: 0px 3px 3px #00000029;
 }
 
+.header__left-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
 .menu-button {
   background: transparent;
+  border-radius: 50%;
   border: none;
-  width: 20px;
-  height: 20px;
-  position: relative;
+  width: 30px;
+  height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.menu-button:hover {
+  background: #00000029;
 }
 
 .menu-button--secondary {
-  position: absolute;
-  right: 15px;
-  display: block;
+  position: relative;
 }
 
-.menu-button--secondary:hover .vertical-elipsis::before {
-  bottom: 8px;
+.menu-button--secondary:hover {
+  background: #00000029;
 }
 
-.menu-button--secondary:hover .vertical-elipsis::after {
-  top: 8px;
+.menu-button:hover .bar-icon {
+  visibility: hidden;
 }
 
 .menu-button:hover .bar-icon::before {
-  bottom: 7px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  bottom: 0;
+  visibility: visible;
 }
 
 .menu-button:hover .bar-icon::after {
-  top: 7px;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  top: 0;
+  visibility: visible;
 }
 
 .bar-icon {
   display: block;
   height: 2px;
   width: 18px;
-  background: #ffffff;
   position: relative;
+  background: #ffffff;
   -webkit-transition: all ease;
   transition: all ease;
 }
@@ -121,10 +161,14 @@ body {
 }
 
 .bar-icon::before {
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
   bottom: 5px;
 }
 
 .bar-icon::after {
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
   top: 5px;
 }
 
@@ -134,11 +178,15 @@ body {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 20px;
-  margin-left: 30px;
+  margin-left: 20px;
 }
 
 .vertical-elipsis {
   position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
   height: 4px;
   width: 4px;
   border-radius: 100%;
