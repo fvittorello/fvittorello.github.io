@@ -9,9 +9,10 @@
 }
 
 .fake-screen-container {
-	height: 667px;
-	width: 360px;
+	height: 671px;
+	width: 364px;
 	border: solid 2px $color-grey-soft;
+	box-sizing: content-box;
 
 	overflow-y: scroll;
 

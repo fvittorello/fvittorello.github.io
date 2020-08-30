@@ -1,6 +1,5 @@
 @import 'scss/variables';
 @import 'scss/reset';
-@import 'scss/baseStyle';
 
 //  COMPONENTS
 //  Simulates a mobile screen container
@@ -8,6 +7,9 @@
 
 //  App header / title / main banner
 @import 'scss/components/app-banner';
+
+//  Dropdown Menu
+@import 'scss/components/dropdown-menu';
 
 //  Main Content
 @import 'scss/components/main-content';

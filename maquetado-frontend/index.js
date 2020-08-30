@@ -6,6 +6,7 @@ const todayItems = document.querySelector('#today-items');
 const tomorrowItems = document.querySelector('#tomorrow-items');
 const burgerCheckbox = document.querySelector('#hor-bars');
 const burgerIcon = document.querySelector('#burger-icon');
+const dropdownMenu = document.querySelector('#dropdown-menu');
 
 yesterdayRadio.addEventListener('click', () => {
 	toggleClassFromElements('display-none', yesterdayItems, [todayItems, tomorrowItems]);
@@ -14,6 +15,7 @@ yesterdayRadio.addEventListener('click', () => {
 todayRadio.addEventListener('click', () => {
 	toggleClassFromElements('display-none', todayItems, [yesterdayItems, tomorrowItems]);
 });
+
 tomorrowRadio.addEventListener('click', () => {
 	toggleClassFromElements('display-none', tomorrowItems, [yesterdayItems, todayItems]);
 });
@@ -21,8 +23,10 @@ tomorrowRadio.addEventListener('click', () => {
 burgerCheckbox.addEventListener('click', () => {
 	if (isChecked(burgerCheckbox)) {
 		toggleClassFromElements('bar-icon--checked', '', [burgerIcon]);
+		toggleClassFromElements('dropdown-menu--hidden', dropdownMenu, []);
 	} else {
 		toggleClassFromElements('bar-icon--checked', burgerIcon, []);
+		toggleClassFromElements('dropdown-menu--hidden', '', [dropdownMenu]);
 	}
 });
 
@@ -42,6 +46,9 @@ function isChecked(checkbox) {
 	return false;
 }
 
+//	This event fix an error caused by the browser cache where the last
+//	capsule button pressed keeps highlighted another way to fix this
+//	is by doing a hard refresh (on firefox= ctrl + shift + r)
 window.addEventListener('load', () => {
 	todayRadio.click();
 });

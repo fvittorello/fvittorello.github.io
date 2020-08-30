@@ -1,9 +1,11 @@
 .main-content {
 	padding: 0 28px 20px 20px;
+	float: none;
+	clear: both;
 }
 
-@import './user-data';
-@import './capsules';
-@import './task-cards';
-@import './divider';
-@import './counters';
+@import './main-content/user-data';
+@import './main-content/capsules';
+@import './main-content/task-cards';
+@import './main-content/divider';
+@import './main-content/counters';

@@ -16,7 +16,7 @@
 			<!-- Contenido del maquetado -->
 			<header class="header" aria-label="page-banner">
 				<div class="header__left-container">
-					<label for="hor-bars" class="menu-button clickable" aria-label="menu" tabindex="0">
+					<label for="hor-bars" class="menu-button clickable" aria-label="primary menu" tabindex="0">
 						<span id="burger-icon" class="bar-icon"></span>
 						<input id="hor-bars" type="checkbox" class="display-none" name="burguer-menu" />
 					</label>
@@ -33,6 +33,19 @@
 					<input id="vert-elipsis" type="checkbox" class="display-none" name="secondary-menu" />
 				</label>
 			</header>
+			<nav class="dropdown-menu-container">
+				<ul id="dropdown-menu" class="dropdown-menu dropdown-menu--hidden">
+					<li class="dropdown-menu__link">
+						<a class="dropdown-menu__link--button" href="#">Placeholder 1</a>
+					</li>
+					<li class="dropdown-menu__link">
+						<a class="dropdown-menu__link--button" href="#">Placeholder 2</a>
+					</li>
+					<li class="dropdown-menu__link">
+						<a class="dropdown-menu__link--button" href="#">Placeholder 3</a>
+					</li>
+				</ul>
+			</nav>
 
 			<main class="main-content">
 				<section class="user-data">
@@ -87,8 +100,19 @@
 
 					<ul id="yesterday-items" class="yesterday-items display-none">
 						<li class="card">
-							<input id="yesterday-card-1" class="hidden card__checkbox-input" type="checkbox" checked />
-							<label for="yesterday-card-1" class="card__checkbox clickable" tabindex="0"></label>
+							<input
+								id="yesterday-card-1"
+								name="yesterday checkbox 1"
+								class="hidden card__checkbox-input"
+								type="checkbox"
+								checked
+							/>
+							<label
+								for="yesterday-card-1"
+								class="card__checkbox clickable"
+								aria-label="card checkbox"
+								tabindex="0"
+							></label>
 
 							<span class="card__icon-container">
 								<img
@@ -104,8 +128,19 @@
 						</li>
 
 						<li class="card">
-							<input id="yesterday-card-2" class="hidden card__checkbox-input" type="checkbox" checked />
-							<label for="yesterday-card-2" class="card__checkbox clickable" tabindex="0"></label>
+							<input
+								id="yesterday-card-2"
+								name="yesterday checkbox 2"
+								class="hidden card__checkbox-input"
+								type="checkbox"
+								checked
+							/>
+							<label
+								for="yesterday-card-2"
+								class="card__checkbox clickable"
+								aria-label="card checkbox"
+								tabindex="0"
+							></label>
 
 							<span class="card__icon-container">
 								<img
@@ -121,8 +156,19 @@
 						</li>
 
 						<li class="card">
-							<input id="yesterday-card-3" class="hidden card__checkbox-input" type="checkbox" checked />
-							<label for="yesterday-card-3" class="card__checkbox clickable" tabindex="0"></label>
+							<input
+								id="yesterday-card-3"
+								name="yesterday checkbox 3"
+								class="hidden card__checkbox-input"
+								type="checkbox"
+								checked
+							/>
+							<label
+								for="yesterday-card-3"
+								class="card__checkbox clickable"
+								aria-label="card checkbox"
+								tabindex="0"
+							></label>
 
 							<span class="card__icon-container">
 								<img
@@ -138,8 +184,19 @@
 						</li>
 
 						<li class="card">
-							<input id="yesterday-card-4" class="hidden card__checkbox-input" type="checkbox" checked />
-							<label for="yesterday-card-4" class="card__checkbox clickable" tabindex="0"></label>
+							<input
+								id="yesterday-card-4"
+								name="yesterday checkbox 4"
+								class="hidden card__checkbox-input"
+								type="checkbox"
+								checked
+							/>
+							<label
+								for="yesterday-card-4"
+								class="card__checkbox clickable"
+								aria-label="card checkbox"
+								tabindex="0"
+							></label>
 
 							<span class="card__icon-container">
 								<img
@@ -155,8 +212,19 @@
 						</li>
 
 						<li class="card">
-							<input id="yesterday-card-5" class="hidden card__checkbox-input" type="checkbox" checked />
-							<label for="yesterday-card-5" class="card__checkbox clickable" tabindex="0"></label>
+							<input
+								id="yesterday-card-5"
+								name="yesterday checkbox 5"
+								class="hidden card__checkbox-input"
+								type="checkbox"
+								checked
+							/>
+							<label
+								for="yesterday-card-5"
+								class="card__checkbox clickable"
+								aria-label="card checkbox"
+								tabindex="0"
+							></label>
 
 							<span class="card__icon-container">
 								<img
@@ -174,8 +242,13 @@
 
 					<ul id="today-items" class="today-items">
 						<li class="card">
-							<input id="today-card-1" class="hidden card__checkbox-input" type="checkbox" />
-							<label for="today-card-1" class="card__checkbox clickable" tabindex="0"></label>
+							<input id="today-card-1" name="today checkbox 1" class="hidden card__checkbox-input" type="checkbox" />
+							<label
+								for="today-card-1"
+								class="card__checkbox clickable"
+								aria-label="card checkbox"
+								tabindex="0"
+							></label>
 
 							<span class="card__icon-container">
 								<img
@@ -191,8 +264,19 @@
 						</li>
 
 						<li class="card">
-							<input id="today-card-2" class="hidden card__checkbox-input" type="checkbox" checked />
-							<label for="today-card-2" class="card__checkbox clickable" tabindex="0"></label>
+							<input
+								id="today-card-2"
+								name="today checkbox 2"
+								class="hidden card__checkbox-input"
+								type="checkbox"
+								checked
+							/>
+							<label
+								for="today-card-2"
+								class="card__checkbox clickable"
+								aria-label="card checkbox"
+								tabindex="0"
+							></label>
 
 							<span class="card__icon-container">
 								<img
@@ -208,8 +292,13 @@
 						</li>
 
 						<li class="card">
-							<input id="today-card-3" class="hidden card__checkbox-input" type="checkbox" />
-							<label for="today-card-3" class="card__checkbox clickable" tabindex="0"></label>
+							<input id="today-card-3" name="today checkbox 3" class="hidden card__checkbox-input" type="checkbox" />
+							<label
+								for="today-card-3"
+								class="card__checkbox clickable"
+								aria-label="card checkbox"
+								tabindex="0"
+							></label>
 
 							<span class="card__icon-container">
 								<img
@@ -227,8 +316,18 @@
 
 					<ul id="tomorrow-items" class="tomorrow-items display-none">
 						<li class="card">
-							<input id="tomorrow-card-3" class="hidden card__checkbox-input" type="checkbox" />
-							<label for="tomorrow-card-3" class="card__checkbox clickable" tabindex="0"></label>
+							<input
+								id="tomorrow-card-3"
+								name="tomorrow checkbox 1"
+								class="hidden card__checkbox-input"
+								type="checkbox"
+							/>
+							<label
+								for="tomorrow-card-3"
+								class="card__checkbox clickable"
+								aria-label="card checkbox"
+								tabindex="0"
+							></label>
 
 							<span class="card__icon-container">
 								<img
@@ -244,8 +343,18 @@
 						</li>
 
 						<li class="card">
-							<input id="tomorrow-card-2" class="hidden card__checkbox-input" type="checkbox" />
-							<label for="tomorrow-card-2" class="card__checkbox clickable" tabindex="0"></label>
+							<input
+								id="tomorrow-card-2"
+								name="tomorrow checkbox 2"
+								class="hidden card__checkbox-input"
+								type="checkbox"
+							/>
+							<label
+								for="tomorrow-card-2"
+								class="card__checkbox clickable"
+								aria-label="card checkbox"
+								tabindex="0"
+							></label>
 
 							<span class="card__icon-container">
 								<img

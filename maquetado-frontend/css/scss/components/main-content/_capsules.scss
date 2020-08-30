@@ -1,0 +1,64 @@
+//  Capsules of days
+
+.tasks {
+	margin-top: 42px;
+}
+
+.capsules {
+	display: flex;
+	align-items: center;
+	border: none;
+}
+
+.selector {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	font-weight: 400;
+	font-size: 16px;
+
+	&__radio--left:checked ~ &__button--left,
+	&__radio--middle:checked ~ &__button--middle,
+	&__radio--right:checked ~ &__button--right {
+		background: linear-gradient(180deg, $color-orange-soft, $color-orange-strong);
+		color: $color-white;
+		font-family: $openSans;
+	}
+
+	&__button {
+		border: none;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__button:hover,
+	&__button:focus {
+		color: $color-white;
+		font-family: $openSans;
+		background: $color-orange-soft;
+		transition: background 0.3s;
+	}
+
+	&__button--left,
+	&__button--right,
+	&__button--middle {
+		height: 34px;
+		width: 33.3%;
+		line-height: 34px;
+		text-align: center;
+		font-family: $roboto;
+		color: $color-grey-strong;
+		background: $color-grey-soft;
+	}
+
+	&__button--left {
+		border-radius: 17px 0 0 17px;
+	}
+
+	&__button--right {
+		border-radius: 0 17px 17px 0;
+	}
+}

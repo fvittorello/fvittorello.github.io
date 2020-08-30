@@ -1,0 +1,44 @@
+//  User Data and Badges
+
+.user {
+	&-data {
+		margin-top: 34px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		position: relative;
+
+		&__left {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+		}
+	}
+
+	&-icon {
+		filter: drop-shadow(0px 3px 3px $color-black-t29);
+	}
+
+	&-name {
+		font-family: $roboto;
+		font-weight: 400;
+		font-size: 24px;
+		color: $color-orange-soft;
+		margin-left: 12px;
+	}
+
+	&-badges {
+		display: flex;
+		align-items: center;
+	}
+
+	&-badges__item {
+		margin-left: 5px;
+
+		&--plus {
+			font-family: $roboto;
+			font-weight: 400;
+			color: $color-grey-strong;
+		}
+	}
+}
